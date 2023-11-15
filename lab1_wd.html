@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе "Vladyslav"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ласкаво просимо в кафе "Vladyslav"!</h1>
+
+    <button id="coffeeButton">Замовити каву</button>
+    <button id="teaButton">Замовити чай</button>
+    <button id="cakeButton">Замовити торт</button>
+
+    <div id="result">Ваш вибір буде відображений тут.</div>
+
+    <script>
+        // Функція для обробки подій
+        function handleButtonClick(event) {
+            // Отримати ID кнопки, яка була натиснута
+            const buttonId = event.target.id;
+
+            // Відобразити вибір користувача
+            document.getElementById('result').innerText = `Ви замовили: ${buttonId}`;
+
+            // Змінити стиль кнопки, яку користувач вибрав
+            event.target.style.backgroundColor = '#4CAF50';
+            event.target.style.color = 'white';
+        }
+
+        // Отримати всі кнопки і додати до них обробники подій
+        const buttons = document.getElementsByTagName('button');
+        for (const button of buttons) {
+            button.addEventListener('click', handleButtonClick);
+        }
+    </script>
+</body>
+</html>
