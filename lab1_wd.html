@@ -34,7 +34,7 @@
     <div id="result">Ваш вибір буде відображений тут.</div>
 
     <script>
-        // Функція для обробки подій
+        // Функція для обробки подій click
         function handleButtonClick(event) {
             // Отримати ID кнопки, яка була натиснута
             const buttonId = event.target.id;
@@ -47,10 +47,17 @@
             event.target.style.color = 'white';
         }
 
+        // Функція для обробки подій mouseover
+        function handleButtonMouseOver(event) {
+            // Змінити колір тексту кнопки при наведенні миші
+            event.target.style.color = 'blue';
+        }
+
         // Отримати всі кнопки і додати до них обробники подій
         const buttons = document.getElementsByTagName('button');
         for (const button of buttons) {
             button.addEventListener('click', handleButtonClick);
+            button.addEventListener('mouseover', handleButtonMouseOver);
         }
     </script>
 </body>
