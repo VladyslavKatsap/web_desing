@@ -1,0 +1,26 @@
+body {
+    width: 200px;
+    height: 250px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #4CAF50;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #counter {
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
